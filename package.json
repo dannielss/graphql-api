@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Daniels887/graphql-api#readme",
   "dependencies": {
     "apollo-server": "^2.14.1",
+    "dotenv": "^8.2.0",
     "graphql": "^15.0.0",
     "knex": "^0.21.1",
     "mysql": "^2.18.1"

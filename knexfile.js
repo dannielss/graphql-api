@@ -1,11 +1,11 @@
-// Update with your config settings.
+require('dotenv/config');
 
 module.exports = {
     client: 'mysql',
     connection: {
-      database: 'products-graphql',
-      user:     'root',
-      password: ''
+      database: process.env.DB_HOST,
+      user: process.env.DB_USER,
+      password: process.env.DB_PASSWORD
     },
     pool: {
       min: 2,
