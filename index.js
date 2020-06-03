@@ -23,6 +23,7 @@ const typeDefs = gql`
   type Mutation {
     newProduct(data: ProductInput): Product!
     deleteProduct(id: Int): Product
+    updateProduct(id: Int, data: ProductInput): Product!
   }
 `;
 
@@ -51,6 +52,14 @@ const resolvers = {
         await db('products').where({ id }).delete()
       }
       return product
+    },
+
+    async updateProduct(_, { id, data }) {
+      const product = await db('products').where({ id })
+      if(product) {
+        await db('products').where({ id }).update(data)
+      }
+      return await db('products').where({ id }).first()
     }
   }
 };
