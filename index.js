@@ -9,9 +9,19 @@ const typeDefs = gql`
     price: Float
   }
 
+  input ProductInput {
+    name: String
+    quantity: Int
+    price: Float
+  }
+
   type Query {
     products: [Product]
     product(id: Int): Product
+  }
+
+  type Mutation {
+    newProduct(data: ProductInput): Product!
   }
 `;
 
@@ -23,6 +33,13 @@ const resolvers = {
 
     product(_, args) {
       const { id } = args
+      return db('products').where({ id }).first()
+    }
+  },
+
+  Mutation: {
+    async newProduct(_, { data }) {
+      const [ id ] = await db('products').insert({...data})
       return db('products').where({ id }).first()
     }
   }
