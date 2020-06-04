@@ -6,6 +6,7 @@
 ## :computer: Como Rodar
 - cd graphql-api
 - npm install
+- crie seu arquivo .env
 - create database products-graphql
 - npx knex migrate:latest
 - npm start
