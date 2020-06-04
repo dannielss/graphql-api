@@ -16,6 +16,8 @@
 - Nodemon
 - Knex
 - Mysql
+- Graphql
+- Dotenv
 
 ## :book: Queries
 
