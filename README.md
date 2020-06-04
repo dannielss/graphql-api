@@ -25,9 +25,38 @@
   products {
     id name quantity price
   }
-  
+```
+Response Query 'products'
+```json
+  {
+    data: {
+      products: [
+        {
+          id: 1,
+          name: "Example",
+          quantity: 1,
+          price: 1
+        }
+      ]
+    }
+  }
+```
+```graphql
   product(id: 1) {
     id name quantity price
+  }
+```
+Response Query 'product(id: Int)'
+```json
+  {
+    data: {
+      product: {
+        id: 1,
+        name: "Example",
+        quantity: 1,
+        price: 1
+      }
+    }
   }
 ```
 
@@ -37,14 +66,62 @@
   newProduct(data: ProductInput) {
       id name quantity price
   }
-  
+```
+
+Response - Mutation 'newProduct(data: ProductInput)'
+```json
+  {
+    data: {
+      newProduct: {
+        id: 1,
+        name: "Example",
+        quantity: 1,
+        price: 1
+      }
+    }
+  }
+```
+
+```graphql
   updateProduct(id: Int, data: ProductInput) {
       id name quantity price
   }
-  
+```
+
+Response - Mutation 'updateProduct(id: Int, data: ProductInput)'
+
+```json
+  {
+    data: {
+      updateProduct: {
+        id: 1,
+        name: "New name",
+        price: 1,
+        quantity: 1
+      }
+    }
+  }
+```
+
+```graphql
   deleteProduct(id: Int) {
       id name quantity price
    }
+```
+
+Response - Mutation 'deleteProduct(id: Int)'
+
+```json
+  {
+    data: {
+      deleteProduct: {
+        id: 1,
+        name: "Example",
+        quantity: 1,
+        price: 1
+      }
+    }
+  }
 ```
 
 > Que a força esteja com você :muscle:
