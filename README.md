@@ -31,7 +31,7 @@ Query 'products'
 
 Response
 
-```json
+```javascript
   {
     data: {
       products: [
@@ -55,7 +55,7 @@ Query 'product(id: Int)'
 ```
 Response
 
-```json
+```javascript
   {
     data: {
       product: {
@@ -80,7 +80,7 @@ Mutation 'newProduct(data: ProductInput)'
 
 Response
 
-```json
+```javascript
   {
     data: {
       newProduct: {
@@ -103,7 +103,7 @@ Mutation 'updateProduct(id: Int, data: ProductInput)'
 
 Response
 
-```json
+```javascript
   {
     data: {
       updateProduct: {
@@ -125,7 +125,7 @@ Mutation 'deleteProduct(id: Int)'
 
 Response
 
-```json
+```javascript
   {
     data: {
       deleteProduct: {
