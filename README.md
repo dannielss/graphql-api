@@ -21,12 +21,16 @@
 
 ## :book: Queries
 
+Query 'products'
+
 ```graphql
   products {
     id name quantity price
   }
 ```
-Response Query 'products'
+
+Response
+
 ```json
   {
     data: {
@@ -41,12 +45,16 @@ Response Query 'products'
     }
   }
 ```
+
+Query 'product(id: Int)'
+
 ```graphql
   product(id: 1) {
     id name quantity price
   }
 ```
-Response Query 'product(id: Int)'
+Response
+
 ```json
   {
     data: {
@@ -62,13 +70,16 @@ Response Query 'product(id: Int)'
 
 ## :notebook: Mutations
 
+Mutation 'newProduct(data: ProductInput)'
+
 ```graphql
   newProduct(data: ProductInput) {
       id name quantity price
   }
 ```
 
-Response - Mutation 'newProduct(data: ProductInput)'
+Response
+
 ```json
   {
     data: {
@@ -82,13 +93,15 @@ Response - Mutation 'newProduct(data: ProductInput)'
   }
 ```
 
+Mutation 'updateProduct(id: Int, data: ProductInput)'
+
 ```graphql
   updateProduct(id: Int, data: ProductInput) {
       id name quantity price
   }
 ```
 
-Response - Mutation 'updateProduct(id: Int, data: ProductInput)'
+Response
 
 ```json
   {
@@ -102,6 +115,7 @@ Response - Mutation 'updateProduct(id: Int, data: ProductInput)'
     }
   }
 ```
+Mutation 'deleteProduct(id: Int)'
 
 ```graphql
   deleteProduct(id: Int) {
@@ -109,7 +123,7 @@ Response - Mutation 'updateProduct(id: Int, data: ProductInput)'
    }
 ```
 
-Response - Mutation 'deleteProduct(id: Int)'
+Response
 
 ```json
   {
