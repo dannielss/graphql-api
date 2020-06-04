@@ -1,5 +1,5 @@
-<h1 align="center"><img src="https://user-images.githubusercontent.com/58083563/83713394-597f1b80-a5fe-11ea-8e6f-e5bca3ade2c3.png" alt="Graphql" width="200" />
-</h1>
+<h3 align="center"><img src="https://user-images.githubusercontent.com/58083563/83713394-597f1b80-a5fe-11ea-8e6f-e5bca3ade2c3.png" alt="Graphql" width="200" />
+</h3>
 
 <h3 align="center">Api feita com GraphQL</h3>
 
