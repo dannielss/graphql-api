@@ -22,7 +22,7 @@
 
 ## :book: Queries
 
-Query 'products'
+Query 'products':
 
 ```graphql
   products {
@@ -30,7 +30,7 @@ Query 'products'
   }
 ```
 
-Response
+Response:
 
 ```javascript
   {
@@ -46,15 +46,15 @@ Response
     }
   }
 ```
-
-Query 'product(id: Int)'
+<hr>
+Query 'product(id: Int)':
 
 ```graphql
   product(id: 1) {
     id name quantity price
   }
 ```
-Response
+Response:
 
 ```javascript
   {
@@ -71,7 +71,7 @@ Response
 
 ## :notebook: Mutations
 
-Mutation 'newProduct(data: ProductInput)'
+Mutation 'newProduct(data: ProductInput)':
 
 ```graphql
   newProduct(data: ProductInput) {
@@ -79,7 +79,7 @@ Mutation 'newProduct(data: ProductInput)'
   }
 ```
 
-Response
+Response:
 
 ```javascript
   {
@@ -93,8 +93,8 @@ Response
     }
   }
 ```
-
-Mutation 'updateProduct(id: Int, data: ProductInput)'
+<hr>
+Mutation 'updateProduct(id: Int, data: ProductInput)':
 
 ```graphql
   updateProduct(id: Int, data: ProductInput) {
@@ -102,7 +102,7 @@ Mutation 'updateProduct(id: Int, data: ProductInput)'
   }
 ```
 
-Response
+Response:
 
 ```javascript
   {
@@ -116,7 +116,8 @@ Response
     }
   }
 ```
-Mutation 'deleteProduct(id: Int)'
+<hr>
+Mutation 'deleteProduct(id: Int)':
 
 ```graphql
   deleteProduct(id: Int) {
@@ -124,7 +125,7 @@ Mutation 'deleteProduct(id: Int)'
    }
 ```
 
-Response
+Response:
 
 ```javascript
   {
