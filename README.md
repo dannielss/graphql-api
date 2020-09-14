@@ -3,7 +3,15 @@
 
 <h3 align="center">Api feita com GraphQL</h3>
 
-## :computer: Como Rodar
+<p align="center">
+  <a href="#wrench-Configuration">Configuration</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#rocket-Technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#book-Queries">Tests</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#notebook-Mutations">Others</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+</p>
+
+
+## :wrench: Configuration
 - cd graphql-api
 - npm install
 - crie seu arquivo .env
@@ -11,7 +19,7 @@
 - npx knex migrate:latest
 - npm start
 
-## :hammer: Tecnologias
+## :rocket: Technologies
 - Apollo-server
 - Node
 - Nodemon
