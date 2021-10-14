@@ -9,6 +9,10 @@ const typeDefs = gql`
     price: Float
   }
 
+  type Return {
+    message: String
+  }
+
   input ProductInput {
     name: String
     quantity: Int
@@ -21,9 +25,9 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    newProduct(data: ProductInput): Product!
-    deleteProduct(id: Int): Product
-    updateProduct(id: Int, data: ProductInput): Product!
+    newProduct(data: ProductInput): Return!
+    deleteProduct(id: Int): Return!
+    updateProduct(id: Int, data: ProductInput): Return!
   }
 `;
 
@@ -41,8 +45,10 @@ const resolvers = {
 
   Mutation: {
     async newProduct(_, { data }) {
-      const [ id ] = await db('products').insert({...data})
-      return db('products').where({ id }).first()
+      await db('products').insert({...data}, '*')
+      return {
+        message: 'Produto cadastrado com sucesso!'
+      }
     },
 
     async deleteProduct(_, args) {
@@ -51,7 +57,9 @@ const resolvers = {
       if(product) {
         await db('products').where({ id }).delete()
       }
-      return product
+      return {
+        message: 'Produto deletado com sucesso!'
+      }
     },
 
     async updateProduct(_, { id, data }) {
@@ -59,7 +67,9 @@ const resolvers = {
       if(product) {
         await db('products').where({ id }).update(data)
       }
-      return await db('products').where({ id }).first()
+      return {
+        message: 'Produto atualizado com sucesso!'
+      }
     }
   }
 };
